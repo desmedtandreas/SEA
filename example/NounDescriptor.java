@@ -34,4 +34,6 @@ public class NounDescriptor {
     catch (Exception e) { System.err.println("Failed to read descriptor: "); }
     return;
    }
+
 }
+
