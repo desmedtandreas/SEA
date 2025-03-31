@@ -1,5 +1,9 @@
 # Assignment Document Generator TODO
 
+using [Markdown](https://en.wikipedia.org/wiki/Markdown).
+You can consult the initial syntax of Markdown [here](https://daringfireball.net/projects/markdown/syntax).
+But as you can read in the article in the first link, several extensions of the initial specification have been developed, each with its own additions to the syntax.
+You can also use the syntax additions of these extension to design the document needed for this assignment.
 
 In this exercise you will apply the basic software engineering concepts you've learned from the previous exercises, but all together and on a larger scale.
 Remember the goal of this course is to teach you the architectural insights and skills required to design large-scale systems that are modular, scalable and evolvable.
@@ -8,6 +12,7 @@ These will be the building blocks to create the larger system of this exercise.
 
 The exercise is about a fictious company that provides services and sell products that are local to the Antwerp region, called The Antwerp Company (TAC).
 The domain model that shows all is included below.
+
 
 ![domainClassModel_TAC](img/TAC_domainClassModel.png)
 
@@ -42,8 +47,6 @@ In addition to this, you need to develop:
   - Invoice amount for each order line, and the total invoice amount (both excluding and including VAT)
   - ...
 
-## Learning objectives TODO
+## Learning objectives
 
-- Develop a larger scale system using basic software engineering concepts learned form this course
-- Discover that adhering to a well-modularized and scalable software architecture requires repetitive programming in which every class is very similar to the others of its type
-- Learn to do your own research when confronted with a technical challenge such as implementing a REST API
+- Develop a generator that generates Markdown documents containing data from application memory
