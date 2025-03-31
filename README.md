@@ -1,18 +1,17 @@
-# Assignment Document Generator TODO
+# Assignment Document Generator
 
-using [Markdown](https://en.wikipedia.org/wiki/Markdown).
+Next to creating a generator to generate code, you can also use the princples for the course Software Engineering and Architecture to develop a document generator.
+In the lecture we explain how this can be done.
+The code that was discussed, is included in the 'example' folder of this repository.
+
+The goal of this assignment is to create a document generator that generates invoices using data that is available in your application.
+These invoices should be made in the standard called [Markdown](https://en.wikipedia.org/wiki/Markdown).
 You can consult the initial syntax of Markdown [here](https://daringfireball.net/projects/markdown/syntax).
 But as you can read in the article in the first link, several extensions of the initial specification have been developed, each with its own additions to the syntax.
 You can also use the syntax additions of these extension to design the document needed for this assignment.
 
-In this exercise you will apply the basic software engineering concepts you've learned from the previous exercises, but all together and on a larger scale.
-Remember the goal of this course is to teach you the architectural insights and skills required to design large-scale systems that are modular, scalable and evolvable.
-To support the learning process, it is beneficial for you to have some hands-on experience with developing a larger system using the basis software engineering concepts of a mirror class, noun classes and verb classes such as a reader and writer).
-These will be the building blocks to create the larger system of this exercise.
-
-The exercise is about a fictious company that provides services and sell products that are local to the Antwerp region, called The Antwerp Company (TAC).
-The domain model that shows all is included below.
-
+In this exercise we continue to use the case of The Antwerp Company, a fictious company that provides services and sell products that are local to the Antwerp region.
+The domain model that shows the structure is included below.
 
 ![domainClassModel_TAC](img/TAC_domainClassModel.png)
 
@@ -21,7 +20,7 @@ The domain model that shows all is included below.
 To create a document generator, you first need to develop the Java files of the domain classes that contain the required data to include in the generated document.
 To create an **invoice generator**, you need data from _at least_ these domain classes:
 
-1. Customer (see code example shown in class)
+1. Customer
 2. Order
 3. ProductVariant_Order
 4. ProductVariant
