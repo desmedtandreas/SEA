@@ -38,7 +38,7 @@ For each of these domain classes, you need to develop:
 
 In addition to this, you need to develop:
 
-- A **mirror class** that reads the data from each domain class from its csv file
+- A **bat file** that has the whole workflow to generate the Java code and the Markdown documents afterwards
 - A **document generator** that generates an invoice document for each order in the system, in a Markdown format. An invoice should include all required and relevant information that is available in the system. This includes:
   - Information about the customer
   - Information about the order
