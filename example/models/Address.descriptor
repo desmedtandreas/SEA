@@ -1,0 +1,6 @@
+String;name
+String;addressId
+String;street
+String;houseNumber
+String;postalCode
+String;city

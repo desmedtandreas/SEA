@@ -1,0 +1,34 @@
+import java.io.*;
+import java.util.*;
+
+public class %Noun%FileReader {
+    public List<%Noun%> readCsvFile(String aName) {
+        List<%Noun%> instanceList = new ArrayList<>();
+        try {
+            int lineNr = 0;
+            File aFile = new File(aName + ".csv");
+            BufferedReader aBr = new BufferedReader(new FileReader(aFile));
+            String aLine = "";
+            while (aLine != null) {
+                aLine = aBr.readLine();
+                if (aLine != null) {
+                    String [] lineParts = aLine.split(";", -1);
+                    if (lineParts.length == %nrOfAttributes%) {
+                        %Noun% instance = new %Noun%();
+                        // start:attribute-assignments
+                        // end:attribute-assignments
+                        instanceList.add(instance);
+                    } else {
+                        System.out.println("Number of attributes <> %nrOfAttributes% on " + lineNr);
+                    }
+                    lineNr++;
+                }
+            }
+            System.out.println("Number of instances that were read: " + lineNr);
+        }
+        catch (Exception e) {
+            System.out.println(e);
+        }
+        return instanceList;
+    }
+}

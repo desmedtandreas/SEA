@@ -1,0 +1,36 @@
+import java.util.ArrayList;
+
+public class %Noun%List {
+
+   private String mName;
+   private ArrayList<%Noun%> mMembers;
+
+   public %Noun%List(String aName) {
+     mName = aName;
+     mMembers = new ArrayList<%Noun%>();
+   }
+
+   public String getName() {
+     return mName;
+   }
+
+   public ArrayList<%Noun%> getMembers() {
+     return mMembers;
+   }
+
+   public void addMember(%Noun% a%Noun%) {
+     mMembers.add(a%Noun%);
+   }
+
+   public void addAllMembers(%Noun%List a%Noun%List) {
+     mMembers.addAll(a%Noun%List.getMembers());
+   }
+
+   public %Noun% give%Noun%(String a%Noun%Name) {
+     %Noun% result = null;
+     for (%Noun% a%Noun%: mMembers) 
+       if (a%Noun%.getname().equals(a%Noun%Name)) result = a%Noun%;
+     return result;
+   }
+}
+

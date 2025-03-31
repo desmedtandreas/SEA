@@ -1,0 +1,6 @@
+String;partnerId
+String;vatNumber
+String;name
+String;contactPerson
+String;phoneNumber
+Address;address
