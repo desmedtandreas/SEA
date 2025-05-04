@@ -1,0 +1,14 @@
+    private %attr% retrieveOrCreate%attr%(String a%attr%Id) {
+        %attr%List m%attr%Repository = repository.get%attr%List();
+
+        %attr% result = m%attr%Repository.getMember(a%attr%Id);
+        if (result != null) {
+            return result;
+        }
+
+        %attr% m%attr% = new %attr%();
+        m%attr%.set%attr%Id(a%attr%Id);
+        m%attr%Repository.addMember(m%attr%);
+
+        return m%attr%;
+    }

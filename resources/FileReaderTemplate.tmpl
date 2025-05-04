@@ -8,8 +8,9 @@ public class %Noun%FileReader {
         this.repository = Repository.getInstance();
     }
 
-    public List<%Noun%> readCsvFile(String aName) {
-        List<%Noun%> instanceList = new ArrayList<>();
+    public %Noun%List readCsvFile(String aName) {
+        %Noun%List instanceList = new %Noun%List(aName);
+        %Noun%List repositoryList = repository.get%Noun%List();
         try {
             int lineNr = 0;
             File aFile = new File(aName + ".csv");
@@ -21,9 +22,16 @@ public class %Noun%FileReader {
                     String [] lineParts = aLine.split(";", -1);
                     if (lineParts.length == %nrOfAttributes%) {
                         %Noun% instance = new %Noun%();
+                        if (!(repositoryList.getMember(lineParts[0]) == null)) {
+                            instance = repositoryList.getMember(lineParts[0]);
+                        }
                         // start:attribute-assignments
                         // end:attribute-assignments
-                        instanceList.add(instance);
+                        instanceList.addMember(instance);
+
+                        if ((repositoryList.getMember(lineParts[0]) == null)) {
+                        repositoryList.addMember(instance);
+                        }
                     } else {
                         System.out.println("Number of attributes <> %nrOfAttributes% on " + lineNr);
                     }
@@ -35,24 +43,9 @@ public class %Noun%FileReader {
         catch (Exception e) {
             System.out.println(e);
         }
-        %NounList m%Noun%Repository = repository.get%Noun%List();
-        m%Noun%Repository.addAllMembers(instanceList);
         return instanceList;
     }
 
-    private %Noun% retrieveOrCreateAddress(String a%Noun%Id) {
-        %Noun%List m%Noun%Repository = repository.get%Noun%List();
-
-        %Noun%ListSearcher searcher = new %Noun%ListSearcher(m%Noun%Repository);
-        %Noun%List searchResult = searcher.searchAddressIdEqualTo(a%Noun%Id);
-        if (!searchResult.getMembers().isEmpty()) {
-            return searchResult.getMembers().get(0);
-        }
-
-        %Noun% m%Noun% = new %Noun%();
-        m%Noun%.set%Noun%Id(a%Noun%Id);
-        m%Noun%Repository.addMember(m%Noun%);
-
-        return m%Noun%;
-    }
+    // start:retrieveOrCreate
+    // end:retrieveOrCreate
 }

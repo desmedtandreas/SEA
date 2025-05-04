@@ -1,0 +1,4 @@
+String;ProductVariant_OrderId
+float;Quantity
+ProductVariant;ProductVariant
+Order;Order

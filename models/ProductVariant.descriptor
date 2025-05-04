@@ -1,0 +1,7 @@
+String;ProductVariantId
+float;VatRate
+float;StockQuantity
+float;OrderQuantity
+float;Weight
+String;Dimensions
+String;Color

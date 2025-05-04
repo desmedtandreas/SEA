@@ -1,0 +1,4 @@
+String;PriceId
+String;Name
+float;UnitPrice
+ProductVariant;ProductVariant

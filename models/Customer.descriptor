@@ -1,0 +1,5 @@
+String;CustomerId
+String;FirstName
+String;LastName
+String;BirthDate
+String;PhoneNumber
